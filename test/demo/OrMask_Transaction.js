@@ -1,3 +1,4 @@
+'use strict'
 class OrMask_Transaction extends jTPS_Transaction {
 
     /**
@@ -10,6 +11,7 @@ class OrMask_Transaction extends jTPS_Transaction {
      * @param {Number} initNum
      */
     constructor(initNum, initIntNum, initMask) {
+        super(); 
         // KEEP THESE FOR LATER
         this.num = initNum;
         this.intNum = initIntNum;

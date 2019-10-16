@@ -1,0 +1,66 @@
+body{
+    background-color: #E6E6E6;
+}
+
+.test_body{
+    position: relative;
+}
+
+.test_method{
+    font-weight: bold;
+    padding: 1%;
+}
+
+.test_result{
+    font-size: large;
+    left: 3%;
+    position: relative;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+
+.input_guide{
+    position: absolute;
+    left: 40%;
+    top: 6%;
+}
+
+.input_button{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px 50px;
+    grid-gap: 1%;
+    position: absolute;
+    left: 63%;
+    top: 9%;
+}
+
+#input{
+    
+}
+
+#prompt{
+    position: absolute;
+    left: 59%;
+    top: 30%;
+}
+
+.visible{
+    visibility: hidden;
+}
+
+#text_area{
+    overflow-y:auto; 
+    overflow-x:auto;
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    left: 41%;
+    top: 44%;
+}

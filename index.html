@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/layout.css" />
+    <script src="./src/jtps/jTPS.js"></script>
+    <script src="./src/jtps/jTPS_Transaction.js"></script>
+    <script src="./test/demo/AddToNum_Transaction.js"></script>
+    <script src="./test/demo/AndMask_Transaction.js"></script>
+    <script src="./test/demo/Num.js"></script>
+    <script src="./test/demo/OrMask_Transaction.js"></script>
+    <script src="./test/junit_test_beds/Unit_test.js"></script>
+    <script src="./test/demo/Tester.js"></script>
+
+    <title>Test</title>
+    <script>
+        window.onload = function () {
+            window.unitTest = new Unit_test();
+            window.unitTest.testAdd();
+            window.unitTest.testAndMask();
+            window.unitTest.testUndo();
+            window.unitTest.testRedo();
+            window.unitTest.testClear();
+
+            window.jtps = new jTPS();
+            window.num = new Num();
+            window.tester = new Tester();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="test_body">
+        <div class="test_method">testAdd(). Test the adding of transactions.</div>
+        <div id="testAdd" class="test_result"></div>
+        <div class="test_method">testAndMask(). Test AndMask_Transaction.</div>
+        <div id="testAndMask" class="test_result"></div>
+        <div class="test_method">testUndo(). Test the undoing of transactions.</div>
+        <div id="testUndo" class="test_result"></div>
+        <div class="test_method">testRedo(). Test the redoing of transactions.</div>
+        <div id="testRedo" class="test_result"></div>
+        <div class="test_method">testClear(). Test the clearing of transactions.</div>
+        <div id="testClear" class="test_result"></div>
+
+    </div>
+
+    <div class="input_guide">
+        ENTER A SELECTION<br>
+        1) Add a Transaction<br>
+        2) Undo a Transaction<br>
+        3) Redo a Transaction<br>
+        4) Clear All Transactions<br>
+        5) Reset Num and Transactions<br>
+    </div>
+    <div class="input_button">
+        <button id="b1">1</button>
+        <button id="b2">2</button>
+        <button id="b3">3</button>
+        <button id="b4">4</button>
+        <button id="b5">5</button>
+    </div>
+    <div id="prompt" >
+        <div>Enter an amount to add: </div>
+        <input type="text" id="input">
+        <button id="b6">submit</button>
+    </div>
+    <div id="text_area"></div>
+
+</body>
+
+</html>

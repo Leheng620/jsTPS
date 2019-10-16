@@ -1,3 +1,4 @@
+'use strict'
 class jTPS_Transaction{
     /**
      * This method is called by jTPS when a transaction is executed.

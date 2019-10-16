@@ -1,3 +1,4 @@
+'use strict'
 /**
  * AddToNum_Transaction.js
  * 
@@ -16,7 +17,8 @@ class AddToNum_Transaction extends jTPS_Transaction {
      * @param {Number} initAmountToAdd 
      */
     constructor(num, initAmountToAdd){
-        // THIS IS THE OBJECT IT WILL MANIPULATE 
+        // THIS IS THE OBJECT IT WILL MANIPULATE
+        super(); 
         this.num = num;   //Num num
         
         // AMOUNT TO ADD/REMOVE FOR NUM

@@ -1,4 +1,4 @@
-
+'use strict'
 class jTPS {
     constructor(){
         // THE TRANSACTION STACK
@@ -197,12 +197,12 @@ class jTPS {
      * @return A textual summary of the TPS.
      */
     toString() {
-        let text = "--Number of Transactions: " + this.transactions.length + "\n";
-        text += "--Current Index on Stack: " + this.mostRecentTransaction + "\n";
-        text += "--Current Transaction Stack:\n";
+        let text = "--Number of Transactions: " + this.transactions.length + "<br>";
+        text += "--Current Index on Stack: " + this.mostRecentTransaction + "<br>";
+        text += "--Current Transaction Stack:<br>";
         for (let i = 0; i <= this.mostRecentTransaction; i++) {
             let jT = this.transactions[i];
-            text += "----" + jT.toString() + "\n";
+            text += "----" + jT.toString() + "<br>";
         }
         return text;
     }
