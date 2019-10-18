@@ -81,14 +81,41 @@ class Unit_test{
             d.innerHTML = "Failed";
             d.classList.remove("green");
             d.classList.add("red");
-            console.log(e);
         }
         
 
     }
     
     testOrMask() {
-        
+        try{
+            let Assert = new assert();
+            // WE'LL JUST USE A SIMPLE NUM FOR TESTING
+            let tps = new jTPS();
+            let num = new Num();
+            Assert.assertEquals(0, num.getNum());
+            
+            // ADD 5 TRANSACTION
+            tps.addTransaction(new AddToNum_Transaction(num, 12));
+            tps.addTransaction(new OrMask_Transaction(num, num.getNum(), 5));
+            Assert.assertEquals(13, num.getNum());
+            Assert.assertEquals(2, tps.getSize());
+            
+            tps.undoTransaction();
+            Assert.assertEquals(12, num.getNum());
+            Assert.assertEquals(2, tps.getSize());
+            Assert.assertEquals(1, tps.getRedoSize());
+            Assert.assertEquals(1, tps.getUndoSize());
+
+            let d = document.getElementById("testOrMask");
+            d.innerHTML = "Passed";
+            d.classList.remove("red");
+            d.classList.add("green");
+        }catch (e){
+            let d = document.getElementById("testOrMask");
+            d.innerHTML = "Failed";
+            d.classList.remove("green");
+            d.classList.add("red");
+        }
     }
 
     /**
