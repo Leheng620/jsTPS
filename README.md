@@ -1,1 +1,1 @@
-*** jsTPS hw2 project
+*** A simulated transaction processing system.
