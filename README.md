@@ -1,1 +1,1 @@
-*** A simulated transaction processing system.
+### A simulated transaction processing system.
